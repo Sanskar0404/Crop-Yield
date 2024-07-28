@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/staticfiles/style.css">
+</head>
+<body>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" placeholder="Area"  name="Enter Area">
+        <input type="text" placeholder="Production"  name="Enter Production">
+        <input type="text" placeholder="Annual_Rainfall" name="Enter Annual_Rainfall">
+       
+
+        <h3> Crop </h3>
+            <select name="Crop" id="abc">
+                <option value="0">Arecanut</option>
+                <option value="1">Arhar/Tur</option>
+                <option value="2">Bajra</option>
+                <option value="3">Banana</option>
+                <option value="4">Barley</option>
+                <option value="5">Black pepper </option>
+                <option value="6">Cardamom</option>
+                <option value="7">Cashewnut</option>
+                <option value="8">Castor seed </option>
+                <option value="9">Coconut</option>
+                <option value="10">Coriander</option>
+                <option value="11">Cotton(lint)</option>
+                <option value="12">Cowpea(Lobia) </option>
+                <option value="13">Dry chillies </option>
+                <option value="14">Garlic</option>
+                <option value="15">Ginger</option>
+                <option value="16">Gram</option>
+                <option value="17">Groundnut </option>
+                <option value="18">Guar seed</option>
+                <option value="19">Horse-gram</option>
+                <option value="20">Jowar</option>
+                <option value="21">Jute</option>
+                <option value="22">Khesari</option>
+                <option value="23">Linseed</option>
+                <option value="24">Maize </option>
+                <option value="25">Masoor</option>
+                <option value="26">Mesta </option>
+                <option value="27">Moong(Green Gram)</option>
+                <option value="28">Moth</option>
+                <option value="29">Niger seed</option>
+                <option value="30">Oilseeds total</option>
+                <option value="31">Onion </option>
+                <option value="32">Other  Rabi pulses</option>
+                <option value="33">Other Cereals</option>
+                <option value="34">Other Kharif pulses</option>
+                <option value="35">other oilseeds</option>
+                <option value="36">Other Summer Pulses</option>
+                <option value="37">Peas & beans (Pulses) </option>
+                <option value="38">Potato</option>
+                <option value="39">Ragi</option>
+                <option value="40">Rapeseed &Mustard</option>
+                <option value="41">Rice</option>
+                <option value="42">Safflower</option>
+                <option value="42">Sannhamp</option>
+                <option value="43">Sesamum</option>
+                <option value="44">Small millets </option>
+                <option value="45">Soyabean</option>
+                <option value="46">Sugarcane</option>
+                <option value="47">Sunflower</option>
+                <option value="48">Sweet potato</option>
+                <option value="49">Tapioca </option>
+                <option value="50">Tobacco</option>
+                <option value="51">Turmeric</option>
+                <option value="52">Urad</option>
+                <option value="52">Wheat</option>
+            </select>
+
+               <h3> Season </h3>
+            <select name="Season" id="abc">
+                <option value="0">Autumn</option>
+                <option value="1">Kharif </option>
+                <option value="2">Rabi</option>
+                <option value="3">Summer</option>
+                <option value="4">Whole Year </option>
+                <option value="5">Winter</option>
+            </select>
+
+                 <h3> State </h3>
+            <select name="State" id="abc">
+                <option value="0">Assam</option>
+                <option value="1">Bihar</option>
+                <option value="2">Jharkhand</option>
+                <option value="3">Kerala </option>
+                <option value="4">Manipur</option>
+                <option value="5">Meghalaya </option>
+                <option value="6">Odisha</option>
+                <option value="7">Puducherry</option>
+                <option value="9">Tamil Nadu </option>
+                <option value="10">Tripura</option>
+                <option value="11">West Bengal</option>
+            </select>
+            <br><br>
+            <button type="submit" id="sub">Prediction</button>
+
+        </form>
+        <br><br>
+        {{prediction_text}}
+
+</body>
+</html>
